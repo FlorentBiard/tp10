@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <script src="He201813.js"></script>
+    <footer><a href="https://github.com/FlorentBiard/tp10"></a></footer>
+    <link href="He201813.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <title>FloClothes</title>
 </head>
-<body onload="formulaire();">
+<body>
 
-<fieldset class="premier" id="form">
+<div  id="form">
 
+    <form action='#' onsubmit=' appel(this); return false' class='formu'>
+        <label>Votre Nom</label>
+        <input  type='text' name='nom' required>
+        <br>
+        <label>Votre Prenom</label>
+        <input type='text' name='prenom' required>
+        <br>
+        <label>Votre Email</label>
+        <input type='email' name='email'  required>
+        <br>
+        <label>Votre Date de naissance</label>
+        <input type='date' name='anniversaire' required>
+        <br>
+        <input type='submit' value='confirmer'>
+    </form>
 
-</fieldset>
+</div>
+
+<div class="jeans" id="j">
+    <img src="jeans.jpg" class="img1">
+
+</div>
 
 </body>
+<script src="He201813.js"></script>
 </html>
