@@ -1,23 +1,9 @@
+"use strict";
+let clothes = {
+        vetement1: { nomV : "jeans", prix : 50 },
+        vetement2: { nomV : "t-shirt", prix : 25}
 
-
-
-function formulaire(){
-document.getElementById("form").innerHTML =
-    "<form action='#' onsubmit=' appel(this); return false'>" +
-    "<label>Votre Nom</label>" +
-    "<input  type='text' name='nom' required>" +
-    "<br>" +
-    "<label>Votre Prenom</label>" +
-    "<input type='text' name='prenom' required>" +
-    "<br>" +
-    "<label>Votre Email</label>" +
-    "<input type='email' name='email'  required>" +
-    "<br>" +
-    "<label>Votre Date de naissance</label>" +
-    "<input type='date' name='anniversaire' required>" +
-    "<br>" +
-    "<input type='submit' value='confirmer'>";
-}
+};
 
 
 class utilisateur {
@@ -43,3 +29,9 @@ function appel(form){
     utilisateurs.printMyNam();
     return false;
 }
+
+function affichage(){
+
+        document.getElementById("j").innerHTML += "<p class='j1'>" + clothes.vetement1.nomV +  "</p>" + "<br>" + "<p class='j2'>" + clothes.vetement1.prix + " euros" + "</p>";
+}
+affichage();
