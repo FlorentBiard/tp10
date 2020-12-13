@@ -1,7 +1,9 @@
 "use strict";
 let clothes = {
-        vetement1: { nomV : "jeans", prix : 50 },
-        vetement2: { nomV : "t-shirt", prix : 25}
+        nom : ['jeans', 't-shirt'],
+        prix : [50,25],
+        taille : [60,45],
+        stocke: [10,15]
 
 };
 
@@ -32,6 +34,9 @@ function appel(form){
 
 function affichage(){
 
-        document.getElementById("j").innerHTML += "<p class='j1'>" + clothes.vetement1.nomV +  "</p>" + "<br>" + "<p class='j2'>" + clothes.vetement1.prix + " euros" + "</p>";
+
+        document.getElementById("j").innerHTML += "<p class='j1'>" + clothes.nom[0] +  "</p>" + "<br>" + "<p class='j2'>" + clothes.prix[0] + " euros" + "</p>" + "Il reste encore " + clothes.stocke[0];
+
 }
 affichage();
+
