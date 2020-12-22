@@ -32,12 +32,13 @@ function appel(form){
 
 function affichage(){
 
-
         document.getElementById("j").innerHTML += "<p class='j1'>" + clothes.v001.nom +  "</p>" + "<br>" + "<p class='j2'>" + clothes.v001.prix + " euros" + "</p>" + "Il reste encore " + clothes.v001.stocke;
         document.getElementById("T-shirt").innerHTML += "<p class='t1'>" + clothes.v002.nom + "</p>" + "<p class='t2'>"+ clothes.v002.prix  + " euros" + "</p>" + "<p class='t3'>" + "Il reste encore " + clothes.v002.stocke + "</p>";
 
 }
-
+/*
+@description cette fonction va avoir les valeurs des boutons qui en suite, la variable concerner par le bouton seras comparer au clefs du tableau associatifs clothes et puis fournira le panier  avec de la DOM
+ */
 
 function panier(r){
     let reponse = r.name;
@@ -52,6 +53,10 @@ function panier(r){
         }
 
 }
+/*
+@description la fonction totalPanier() aura comme role de faire le calcule est additioner les articles que l'utilisateur founira en introduisant un nombre.
+
+ */
 function totalPanier(){
     let panierPrix = document.getElementById("total");
     let valeurPrix1 = document.getElementById("valeur1").value;
@@ -60,5 +65,6 @@ function totalPanier(){
 
         panierPrix.innerHTML = "<p>" + totall + "</p>";v
 }
+
 
 
