@@ -1,9 +1,7 @@
 "use strict";
 let clothes = {
-        nom : ['jeans', 't-shirt'],
-        prix : [50,25],
-        taille : [60,45],
-        stocke: [10,15]
+        v001 : {nom:"jeans",prix: 50,taille:100,stocke:5,marque:"nike"},
+        v002 : {nom:"T-shirt",prix:25,taille:50,stocke:10,marque:"jack&john"}
 
 };
 
@@ -35,8 +33,32 @@ function appel(form){
 function affichage(){
 
 
-        document.getElementById("j").innerHTML += "<p class='j1'>" + clothes.nom[0] +  "</p>" + "<br>" + "<p class='j2'>" + clothes.prix[0] + " euros" + "</p>" + "Il reste encore " + clothes.stocke[0];
+        document.getElementById("j").innerHTML += "<p class='j1'>" + clothes.v001.nom +  "</p>" + "<br>" + "<p class='j2'>" + clothes.v001.prix + " euros" + "</p>" + "Il reste encore " + clothes.v001.stocke;
+        document.getElementById("T-shirt").innerHTML += "<p class='t1'>" + clothes.v002.nom + "</p>" + "<p class='t2'>"+ clothes.v002.prix  + " euros" + "</p>" + "<p class='t3'>" + "Il reste encore " + clothes.v002.stocke + "</p>";
 
 }
-affichage();
+
+
+function panier(r){
+    let reponse = r.name;
+    console.log(reponse);
+
+        if(reponse === "v001"){
+        document.getElementById("resultat").innerHTML = "<th>" + clothes.v001.nom + "</th>" + "<th>" + clothes.v001.marque + "</th>" + "<input oninput='totalPanier();' type='number' name='totalPrix' id='valeur1'>";
+
+        clothes.v001.stocke--;
+            } else if(reponse === "v002"){
+            document.getElementById("resultatt").innerHTML =  "<th>" + clothes.v002.nom + "</th>" + "<th>" + clothes.v002.marque + "</th>" + "<input oninput='totalPanier();' type='number' name='totalPrix' id='valeur2'>";
+        }
+
+}
+function totalPanier(){
+    let panierPrix = document.getElementById("total");
+    let valeurPrix1 = document.getElementById("valeur1").value;
+    let valeurPrix2 = document.getElementById("valeur2").value;
+    let totall = (clothes.v001.prix * valeurPrix1) + (clothes.v002.prix * valeurPrix2);
+
+        panierPrix.innerHTML = "<p>" + totall + "</p>";v
+}
+
 
