@@ -5,31 +5,56 @@
     <meta charset="UTF-8">
     <title>FloClothes</title>
 </head>
-<body>
+<body onload="affichage();">
 
 
 <div  id="form">
 
     <form action='#' onsubmit=' appel(this); return false' class='formu'>
         <label>Votre Nom</label>
-        <input  type='text' name='nom' required>
+        <input  type='text' name='nom' placeholder="Florent" pattern="[A-Za-z]" required>
         <br>
         <label>Votre Prenom</label>
-        <input type='text' name='prenom' required>
+        <input type='text' name='prenom' placeholder="rigard"  pattern="[A-Za-z]" required>
         <br>
         <label>Votre Email</label>
-        <input type='email' name='email'  required>
+        <input type='email' name='email' placeholder="qdqsdqsd@gmail.com" required>
         <br>
         <label>Votre Date de naissance</label>
         <input type='date' name='anniversaire' required>
         <br>
-        <input type='submit' value='confirmer'>
+        <input type='submit' value='confirmer' class="bouton1">
     </form>
 
 </div>
 
 <div class="jeans" id="j">
     <img src="img/jeans.jpg" class="img1">
+    <button class="bj" type="button" name="v001" onclick="panier(this);">Cliquez ici pour le mettre dans le panier  </button>
+
+</div>
+<div id="T-shirt">
+    <img src="img/T-shirt.png" class="img2">
+    <button class="bt" type="button" name="v002" onclick="panier(this);">Cliquez ici pour le mettre dans le panier  </button>
+
+
+</div>
+
+<div class="panierFinal">
+    <table>
+        <caption>Voici votre panier</caption>
+        <tr>
+            <th>Nom</th> <th>marque</th> <th>Total</th>
+        </tr>
+        <tr id="resultat">
+
+        </tr>
+        <tr id="resultatt">
+
+        </tr>
+
+        <tr id="total"></tr>
+    </table>
 
 </div>
 <footer><a href="https://github.com/FlorentBiard/tp10"></a></footer>
