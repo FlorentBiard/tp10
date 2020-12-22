@@ -1,15 +1,17 @@
 body{
     width: 1000px;
     height : 950px;
+    border: black 1px solid;
+    background-color: #E6DBDB;
 
 }
 #form{
-    height: 150px;
+    height: 200px;
     width: 300px;
     position: absolute;
     left: 50px;
     top: 50px;
-    border: solid black;
+    border: double black;
 }
 .img1{
     position: absolute;
@@ -25,6 +27,8 @@ body{
     width: 325px;
     top : 50px;
     left: 500px;
+    box-shadow:
+            0 -10px 10px 10px #E4DD26;
 }
 .j1{
     position: absolute;
@@ -37,4 +41,68 @@ body{
     position: absolute;
     left: 175px;
     top: 100px;
+}
+.bouton1{
+    position: absolute;
+    top: 150px;
+    border: solid black 1px;
+    padding: 1em 2em;
+color: black;
+background: #EBE44B;
+}
+.bouton1:hover,
+.bouton1:focus{
+    box-shadow:
+            0 -5px 5px 2px blue;
+    background-color: blue;
+    transition-duration: 5s;
+}
+.panierFinal{
+    position: absolute;
+    top : 600px;
+    left : 425px
+
+}
+#T-shirt{
+    background-color: rgb(218,218,27);
+    position: absolute;
+    height: 250px;
+    width : 250px;
+    top : 350px;
+    left: 500px;
+    box-shadow:
+            0 -10px 10px 10px #E4DD26;
+}
+.img2{
+    display: block;
+    position: absolute;
+    height: 150px;
+    width : 150px;
+}
+.t1{
+    position: absolute;
+    left: 175px;
+    top: 50px;
+    font-weight: bolder;
+    font-size: 25px;
+
+}
+.t2{
+    position: absolute;
+    left: 175px;
+    top: 100px;
+}
+.t3{
+    position: absolute;
+    left: 175px;
+    top: 150px;
+}
+.bj, .bt{
+    position: absolute;
+    top: 205px;
+}
+table{
+    position: absolute;
+    top: 23px;
+    border: solid;
 }
